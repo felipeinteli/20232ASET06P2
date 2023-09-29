@@ -14,7 +14,8 @@ module.exports = {
     },
 
     calcularDescontoFaixa: function (faixa) {
-       
+        totalFaixa = (faixa.fimFaixa - faixa.inicioFaixa )* faixa.aliquota;
+        return totalFaixa;
     },
 
     calcularDescontoResidual: function (salarioBruto, faixaAnterior, faixaAtual) {
@@ -54,4 +55,11 @@ module.exports = {
         //(n * 100) / 100 - utilizado para fazer o arredondamento para 2 casas decimais
         return Math.round(descontoINSS * 100) / 100;
     }
+
+    // calcularDescontoFaixa: function (salarioBruto) {
+
+        
+
+    //     // let descontoFaixa = totalFaixa * faixa.aliquota;
+    // }
 }
